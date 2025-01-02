@@ -1,4 +1,6 @@
-import token_html from "./get_copilot_token.html";
+import { promises as fs } from 'fs';
+
+const token_html = await fs.readFile('./get_copilot_token.html', 'utf-8');
 
 export default {
   async fetch (request, env) {
